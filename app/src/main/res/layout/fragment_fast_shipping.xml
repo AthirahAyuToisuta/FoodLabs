@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFC107"
-    android:orientation="vertical"
-    tools:context=".detail.Main2Activity">b
-
+    tools:context=".intro.fragment.Fragment4">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,22 +19,22 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
             android:gravity="center"
-            android:src="@drawable/ic_cari" />
+            android:src="@drawable/ic_bike" />
+
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textsize="70dp"
             android:textstyle="bold"
-            tools:text="Quick Search" />
+            tools:text="Fast shipping" />
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
+            android:layout_height="wrap_content" />
 
 
         <TextView
@@ -66,6 +64,21 @@
             android:textStyle="bold"
             android:textstyle="bold" />
 
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="11dp"
+            android:layout_gravity="center"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"/>
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/circle"
+            android:layout_marginLeft="166dp"
+            android:src="@drawable/ic_circle_black"
+            android:layout_width="7dp"
+            android:height="7dp"/>
+
 
     </LinearLayout>
-</LinearLayout>
+
+
+</FrameLayout>

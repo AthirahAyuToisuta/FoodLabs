@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".intro.Main4Activity"></activity>
-        <activity android:name=".home.Main3Activity" />
+        <activity android:name=".home.HomeActivity" />
         <activity android:name=".detail.Main2Activity" />
         <activity android:name=".MainActivity">
             <intent-filter>

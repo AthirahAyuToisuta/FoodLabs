@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFC107"
-    android:orientation="vertical"
-    tools:context=".detail.Main2Activity">
+    tools:context=".intro.fragment.Fragment2">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="-28dp"
+        tools:layout_editor_absoluteY="-16dp">
 
         <ImageView
             android:id="@+id/cari1"
@@ -20,7 +21,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
             android:gravity="center"
-            android:src="@drawable/ic_bike" />
+            android:src="@drawable/ic_lunch" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -31,7 +32,7 @@
             android:layout_height="wrap_content"
             android:textsize="70dp"
             android:textstyle="bold"
-            tools:text="Fast shipping" />
+            tools:text="Variety of food" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -65,8 +66,6 @@
             android:textStyle="bold"
             android:textstyle="bold" />
 
-
     </LinearLayout>
 
-
-</LinearLayout>
+</FrameLayout>
