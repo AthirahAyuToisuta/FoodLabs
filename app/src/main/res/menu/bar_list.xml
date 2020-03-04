@@ -6,28 +6,28 @@
         android:id="@+id/home"
         android:enabled="true"
         android:icon="@drawable/ic_home"
-        app:showAsAction="ifRoom">
-    </item>
+        android:title="Home"
+        app:showAsAction="ifRoom"></item>
 
     <item
         android:id="@+id/location"
         android:enabled="true"
         android:icon="@drawable/ic_pin"
-        app:showAsAction="ifRoom">
-    </item>
+        android:title="Location"
+        app:showAsAction="ifRoom"></item>
 
     <item
         android:id="@+id/love"
         android:enabled="true"
         android:icon="@drawable/ic_love"
-        app:showAsAction="ifRoom">
-    </item>
+        android:title="Like"
+        app:showAsAction="ifRoom"></item>
 
     <item
         android:id="@+id/user"
         android:enabled="true"
         android:icon="@drawable/ic_user"
-        app:showAsAction="ifRoom">
-    </item>
+        android:title="User"
+        app:showAsAction="ifRoom"></item>
 
 </menu>

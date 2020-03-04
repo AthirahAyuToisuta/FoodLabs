@@ -2,7 +2,7 @@ package com.thiraa.foodlabs.intro.models;
 
 import java.util.List;
 
-public abstract class ResponseIntro {
+public class ResponseIntro {
 
     @com.google.gson.annotations.Expose
     @com.google.gson.annotations.SerializedName("data")

@@ -5,10 +5,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="36dp"
-    tools:context=".detail.models.FragmentIngredients">
+    tools:context=".detail.fragment.FragmentIngredients">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/tvIngOne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -23,6 +24,7 @@
         android:background="#bbb" />
 
     <TextView
+        android:id="@+id/tvIngTwo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -37,6 +39,7 @@
         android:background="#bbb" />
 
     <TextView
+        android:id="@+id/tvIngThree"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -51,6 +54,7 @@
         android:background="#bbb" />
 
     <TextView
+        android:id="@+id/tvIngFour"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
