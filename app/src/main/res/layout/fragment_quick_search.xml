@@ -14,7 +14,7 @@
         android:orientation="vertical">
 
         <ImageView
-            android:id="@+id/cari1"
+            android:id="@+id/quick_search"
             android:layout_width="350dp"
             android:layout_height="100dp"
             android:layout_centerHorizontal="true"
@@ -78,25 +78,25 @@
             android:layout_width="8dp"
             android:layout_height="7dp"
             android:layout_marginLeft="166dp"
-            android:src="@drawable/ic_circle_black"/>
+            android:src="@drawable/ic_circle"/>
         <ImageView
-            android:id="@+id/page2"
+          android:id="@+id/page2"
             android:layout_width="8dp"
             android:layout_height="7dp"
             android:layout_marginLeft="4dp"
-            android:src="@drawable/ic_circle_black"/>
+            android:src="@drawable/ic_circle_white"/>
         <ImageView
             android:id="@+id/page3"
             android:layout_width="8dp"
             android:layout_height="7dp"
             android:layout_marginLeft="4dp"
-            android:src="@drawable/ic_circle_black"/>
+            android:src="@drawable/ic_circle_white"/>
         <ImageView
             android:id="@+id/page4"
             android:layout_width="8dp"
             android:layout_height="7dp"
             android:layout_marginLeft="5dp"
-            android:src="@drawable/ic_circle_black"/>
+            android:src="@drawable/ic_circle_white"/>
 
 
     </LinearLayout>

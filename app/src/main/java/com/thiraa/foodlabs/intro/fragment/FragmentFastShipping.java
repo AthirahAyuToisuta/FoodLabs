@@ -19,6 +19,7 @@ import com.thiraa.foodlabs.R;
 public class FragmentFastShipping extends Fragment {
     @Nullable
     @Override
+
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
         View rootView = inflater.inflate(R.layout.fragment_fast_shipping, container, false);
@@ -29,6 +30,8 @@ public class FragmentFastShipping extends Fragment {
                 Toast.makeText(getContext(), "Fast Shipping", Toast.LENGTH_SHORT).show();
             }
         });
+
+
 
 
         return rootView;
