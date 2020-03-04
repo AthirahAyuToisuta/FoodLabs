@@ -52,7 +52,7 @@
             tools:text="restaurant's around you" />
 
         <Button
-            android:id="@+id/btnLogin1"
+            android:id="@+id/btnLogin4"
             android:layout_width="400dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
