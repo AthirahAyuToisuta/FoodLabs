@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="36dp"
+    android:padding="20dp"
     tools:context=".detail.fragment.FragmentIngredients">
 
     <!-- TODO: Update blank fragment layout -->
@@ -45,21 +45,6 @@
         android:layout_marginTop="10dp"
         android:paddingLeft="10dp"
         android:text="6 - eggs, plus 3 egg yolks, divided"
-        android:textSize="20sp" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_marginTop="15dp"
-        android:background="#bbb" />
-
-    <TextView
-        android:id="@+id/tvIngFour"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:paddingLeft="10dp"
-        android:text="2 - tablespoons lemon juice"
         android:textSize="20sp" />
 
     <View

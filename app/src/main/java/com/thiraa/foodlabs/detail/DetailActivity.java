@@ -10,11 +10,19 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.thiraa.foodlabs.R;
+import com.thiraa.foodlabs.detail.connection.ApiCallback;
+import com.thiraa.foodlabs.detail.connection.ConnectionAPI;
 import com.thiraa.foodlabs.detail.fragment.FragmentDirections;
 import com.thiraa.foodlabs.detail.fragment.FragmentIngredients;
+import com.thiraa.foodlabs.detail.models.ResponseDetails;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class DetailActivity extends AppCompatActivity {
 
+
+    public static ResponseDetails.DataEntity responseDetailData;
     TextView tvIngredients, tvDirections;
 
     @Override
@@ -26,7 +34,11 @@ public class DetailActivity extends AppCompatActivity {
 
         setEvent();
 
-        setFragment(new FragmentIngredients());
+        FragmentIngredients fragment = new FragmentIngredients();
+        fragment.responseDetailData = responseDetailData;
+        setFragment(fragment);
+
+
     }
 
     private void setView() {
@@ -38,14 +50,18 @@ public class DetailActivity extends AppCompatActivity {
         tvIngredients.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setFragment(new FragmentIngredients());
+                FragmentIngredients fragment = new FragmentIngredients();
+                fragment.responseDetailData = responseDetailData;
+                setFragment(fragment);
             }
         });
 
         tvDirections.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setFragment(new FragmentDirections());
+                FragmentDirections fragment = new FragmentDirections();
+                fragment.responseDetailData = responseDetailData;
+                setFragment(fragment);
             }
         });
     }
@@ -56,4 +72,6 @@ public class DetailActivity extends AppCompatActivity {
         fragmentTransaction.replace(R.id.fragment_container, fragment);
         fragmentTransaction.commit();
     }
+
+
 }

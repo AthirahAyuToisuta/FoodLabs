@@ -13,14 +13,15 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.thiraa.foodlabs.R;
+import com.thiraa.foodlabs.detail.models.ResponseDetails;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class FragmentDirections extends Fragment {
-    Context context;
 
-    TextView tvOne, tvTwo, tvTitleOne, tvTitleTwo, tvKetOne, tvKetTwo ;
+    public ResponseDetails.DataEntity responseDetailData;
+    TextView tvOne, tvTwo, tvThree, tvTitleOne, tvTitleTwo, tvTitleThree, tvKetOne, tvKetTwo, tvKetThree;
 
     public FragmentDirections() {
         // Required empty public constructor
@@ -37,9 +38,8 @@ public class FragmentDirections extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        context = getContext();
         setView(view);
-        setEvent();
+        setData();
     }
 
     private void setView(View view) {
@@ -49,10 +49,17 @@ public class FragmentDirections extends Fragment {
         tvTwo = view.findViewById(R.id.tvTwo);
         tvTitleTwo = view.findViewById(R.id.tvTitleTwo);
         tvKetTwo = view.findViewById(R.id.tvKetTwo);
+        tvThree = view.findViewById(R.id.tvThree);
+        tvTitleThree = view.findViewById(R.id.tvTitleThree);
+        tvKetThree = view.findViewById(R.id.tvKetThree);
     }
 
-    private void setEvent() {
-
-
+    private void setData() {
+        tvTitleOne.setText(responseDetailData.getRecipe_cook_step().get(0).getCook_step_title());
+        tvTitleTwo.setText(responseDetailData.getRecipe_cook_step().get(1).getCook_step_title());
+        tvTitleThree.setText(responseDetailData.getRecipe_cook_step().get(2).getCook_step_title());
+        tvKetOne.setText(responseDetailData.getRecipe_cook_step().get(0).getCook_step_desc());
+        tvKetTwo.setText(responseDetailData.getRecipe_cook_step().get(1).getCook_step_desc());
+        tvKetThree.setText(responseDetailData.getRecipe_cook_step().get(2).getCook_step_desc());
     }
 }
