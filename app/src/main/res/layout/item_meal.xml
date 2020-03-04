@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginTop="10dp"
     android:layout_marginBottom="10dp"
@@ -21,7 +21,7 @@
             android:paddingBottom="8dp">
 
             <ImageView
-                android:id="@+id/ivImage"
+                android:id="@+id/ivMeal"
                 android:layout_width="130dp"
                 android:layout_height="160dp"
                 tools:text="Image" />
@@ -42,7 +42,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/txtAddress"
+                android:id="@+id/txtDetail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="8dp"
