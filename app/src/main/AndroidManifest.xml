@@ -12,6 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".detail.AuthActivity"></activity>
+        <activity android:name=".intro.models.ViewPagerIntro" />
         <activity android:name=".explore.BannerSampleActivity">
 
             <intent-filter>
@@ -23,7 +25,7 @@
         <activity android:name=".intro.models.ViewPagerIntro" />
         <activity android:name=".intro.Main4Activity" />
         <activity android:name=".home.HomeActivity" />
-        <activity android:name=".detail.Main2Activity" />
+        <activity android:name=".detail.DetailActivity" />
         <activity android:name=".MainActivity">
            <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
