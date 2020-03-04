@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.thiraa.foodlabs">
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -10,10 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".intro.models.ViewPagerIntro"></activity>
+        <activity android:name=".detail.AuthActivity"></activity>
+        <activity android:name=".intro.models.ViewPagerIntro" />
         <activity android:name=".intro.Main4Activity" />
         <activity android:name=".home.HomeActivity" />
-        <activity android:name=".detail.Main2Activity" />
+        <activity android:name=".detail.DetailActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
