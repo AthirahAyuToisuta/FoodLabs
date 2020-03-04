@@ -1,42 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
         android:id="@+id/home"
         android:enabled="true"
         android:icon="@drawable/ic_home"
-        app:showAsAction="ifRoom"
-        android:title="Home">
-
-    </item>
+        android:title="Home"
+        app:showAsAction="ifRoom"></item>
 
     <item
         android:id="@+id/location"
         android:enabled="true"
         android:icon="@drawable/ic_pin"
-        app:showAsAction="ifRoom"
-        android:title="Location">
-
-    </item>
+        android:title="Location"
+        app:showAsAction="ifRoom"></item>
 
     <item
         android:id="@+id/love"
         android:enabled="true"
         android:icon="@drawable/ic_love"
-        app:showAsAction="ifRoom"
-        android:title="Like">
-
-    </item>
+        android:title="Like"
+        app:showAsAction="ifRoom"></item>
 
     <item
         android:id="@+id/user"
         android:enabled="true"
         android:icon="@drawable/ic_user"
-        app:showAsAction="ifRoom"
-        android:title="User">
-
-    </item>
+        android:title="User"
+        app:showAsAction="ifRoom"></item>
 
 </menu>
