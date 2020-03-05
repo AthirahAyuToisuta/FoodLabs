@@ -1,10 +1,13 @@
 package com.thiraa.foodlabs.home;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.graphics.Movie;
 import android.os.Bundle;
+import android.telecom.Call;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -12,7 +15,10 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.android.volley.Response;
+import com.thiraa.foodlabs.BuildConfig;
 import com.thiraa.foodlabs.R;
 import com.thiraa.foodlabs.home.connection.ApiCallback;
 import com.thiraa.foodlabs.home.connection.ConnectionAPI;
@@ -28,21 +34,17 @@ public class HomeActivity extends AppCompatActivity {
     EditText etSearch;
     TextView tvMostPopular, tvMealDeals, tvSeeAllmp, tvSeeAllmd;
     String search = "";
-
     Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
         context = getApplicationContext();
-
         setView();
         setEvent();
         loadFood();
         loadMeal();
-
     }
 
     private void setView() {
@@ -92,20 +94,18 @@ public class HomeActivity extends AppCompatActivity {
     private void setRecyclerViewFood(List<ResponseHome.DataEntity> data) {
         FoodAdapter adapterFood = new FoodAdapter(data);
         rvMostPopular.setAdapter(adapterFood);
-
-
-
     }
 
-    private void setRecyclerViewMeal(List<ResponseHome.DataEntity> data) {
-        Log.e("test", ""+data.size());
+       private void setRecyclerViewMeal(List<ResponseHome.DataEntity> data) {
+        Log.e("test", "" + data.size());
         MealAdapter adapterMeal = new MealAdapter(data);
         rvMealDeals.setAdapter(adapterMeal);
     }
 
-    private void loadFood(){
 
-        Map <String, String> params=new HashMap<>();
+    private void loadFood() {
+
+        Map<String, String> params = new HashMap<>();
         ConnectionAPI.loadHome(params, new ApiCallback<ResponseHome>() {
             @Override
             public void onSuccess(ResponseHome response) {
@@ -119,9 +119,9 @@ public class HomeActivity extends AppCompatActivity {
         });
     }
 
-    private void loadMeal(){
+    private void loadMeal() {
 
-        Map <String, String> params=new HashMap<>();
+        Map<String, String> params = new HashMap<>();
         ConnectionAPI.loadHome(params, new ApiCallback<ResponseHome>() {
             @Override
             public void onSuccess(ResponseHome response) {

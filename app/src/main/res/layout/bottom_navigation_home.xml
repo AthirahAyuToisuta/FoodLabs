@@ -10,8 +10,7 @@
         android:layout_height="60dp"
         android:gravity="center">
 
-
-
     </LinearLayout>
 
 </LinearLayout>
+
