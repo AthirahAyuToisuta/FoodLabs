@@ -23,7 +23,7 @@ public class FragmentVarietyFood extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
         View rootView = inflater.inflate(R.layout.fragment_variety_food, container, false);
-        Button btnLogin = rootView.findViewById(R.id.btnLogin2);
+        Button btnLogin = rootView.findViewById(R.id.btnLogin);
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

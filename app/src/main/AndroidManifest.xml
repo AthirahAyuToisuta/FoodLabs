@@ -12,19 +12,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".detail.AuthActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".detail.AuthActivity"></activity>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".intro.models.ViewPagerIntro" />
         <activity android:name=".explore.BannerSampleActivity">
 
 
         </activity>
-        <activity android:name=".intro.Main4Activity" />
+        <activity android:name=".intro.IntroActivity" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+
         <activity android:name=".home.HomeActivity" />
         <activity android:name=".detail.DetailActivity" />
         <activity android:name=".MainActivity">
