@@ -4,24 +4,27 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
 import com.thiraa.foodlabs.R;
 import com.thiraa.foodlabs.home.model.ResponseHome;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class HomeActivityAdapter extends RecyclerView.Adapter<HomeActivityAdapter.HomeActivityViewHolder> {
+public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.HomeActivityViewHolder> {
 
-    public List<ResponseHome> items;
+    public List<ResponseHome.DataEntity> items;
     Context context;
 
-    public HomeActivityAdapter() {
-        items = new ArrayList();
+    public FoodAdapter(List<ResponseHome.DataEntity> items) {
+        this.items = new ArrayList();
+        this.items = items;
     }
 
     @NonNull
@@ -29,22 +32,27 @@ public class HomeActivityAdapter extends RecyclerView.Adapter<HomeActivityAdapte
     public HomeActivityViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         context = parent.getContext();
         View view = LayoutInflater.from(context).inflate(R.layout.item_food, parent, false);
-        return new HomeActivityAdapter.HomeActivityViewHolder(view);
+        return new FoodAdapter.HomeActivityViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull HomeActivityViewHolder holder, int position) {
+        holder.txtName.setText(items.get(position).getRecipe_title());
+        holder.txtAddress.setText(items.get(position).getRecipe_sub_title());
+        holder.txtDetail.setText(items.get(position).getRecipe_desc());
+
+        Picasso.with(context).load(items.get(position).getRecipe_image()).into(holder.ivFood);
 
     }
 
     @Override
     public int getItemCount() {
-        return 5;
+        return items.size();
     }
 
     public class HomeActivityViewHolder extends RecyclerView.ViewHolder {
-        TextView tvMostPopular, tvMealDeals, tvSeeAllmp, tvSeeAllmd;
-        RecyclerView rvMostPopular, rvMealDeals;
+        TextView txtName, txtAddress, txtDetail;
+        ImageView ivFood;
 
 
         public HomeActivityViewHolder(@NonNull View view) {
@@ -55,13 +63,12 @@ public class HomeActivityAdapter extends RecyclerView.Adapter<HomeActivityAdapte
 
         private void setView(View view) {
 
-            tvMostPopular = view.findViewById(R.id.tvMostPopular);
-            tvMealDeals = view.findViewById(R.id.tvMealDeals);
-            tvSeeAllmp = view.findViewById(R.id.tvSeeAllmp);
-            tvSeeAllmd = view.findViewById(R.id.tvSeaAllmd);
+            txtName = view.findViewById(R.id.txtName);
+            txtAddress = view.findViewById(R.id.txtAddress);
+            txtDetail = view.findViewById(R.id.txtDetail);
+            ivFood = view.findViewById(R.id.ivFood);
 
-            rvMostPopular = view.findViewById(R.id.rvMostPopular);
-            rvMealDeals = view.findViewById(R.id.rvMealDeals);
+
         }
     }
 }

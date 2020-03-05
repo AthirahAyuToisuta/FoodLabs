@@ -32,8 +32,9 @@
 
             <TextView
                 android:id="@+id/tvMostPopular"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:paddingTop="10dp"
                 android:text="Most Popular"
                 android:textColor="#0A0A0C"
@@ -45,7 +46,6 @@
                 android:id="@+id/tvSeeAllmp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="265dp"
                 android:paddingTop="10dp"
                 android:text="See All"
                 android:textColor="#5252E2"
@@ -55,26 +55,14 @@
 
         </LinearLayout>
 
-        <HorizontalScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvMostPopular"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:spanCount="1"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 tools:itemCount="8"
                 tools:listitem="@layout/item_food" />
-
-        </HorizontalScrollView>
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -83,7 +71,8 @@
 
             <TextView
                 android:id="@+id/tvMealDeals"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:paddingTop="10dp"
                 android:text="Meal Deals"
@@ -96,7 +85,6 @@
                 android:id="@+id/tvSeaAllmd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="280dp"
                 android:paddingTop="10dp"
                 android:text="See All"
                 android:textColor="#5252E2"
@@ -106,28 +94,17 @@
 
         </LinearLayout>
 
-        <HorizontalScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvMealDeals"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:spanCount="1"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 tools:itemCount="8"
                 tools:listitem="@layout/item_meal" />
 
-        </HorizontalScrollView>
 
     </LinearLayout>
-
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
