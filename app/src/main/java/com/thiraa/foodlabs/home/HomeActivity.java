@@ -102,7 +102,6 @@ public class HomeActivity extends AppCompatActivity {
         rvMealDeals.setAdapter(adapterMeal);
     }
 
-
     private void loadFood() {
 
         Map<String, String> params = new HashMap<>();
