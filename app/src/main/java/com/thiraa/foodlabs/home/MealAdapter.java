@@ -65,7 +65,6 @@ public class MealAdapter extends RecyclerView.Adapter<MealAdapter.HomeActivityVi
             txtDetail = view.findViewById(R.id.txtDetail);
             ivMeal = view.findViewById(R.id.ivMeal);
 
-
         }
     }
 }

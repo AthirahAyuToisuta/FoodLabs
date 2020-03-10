@@ -68,7 +68,6 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.HomeActivityVi
             txtDetail = view.findViewById(R.id.txtDetail);
             ivFood = view.findViewById(R.id.ivFood);
 
-
         }
     }
 }

@@ -46,8 +46,8 @@ public class ConnectionAPI {
         requestQueue.add(gsonRequest);
     }
 
-
     public void clearConnection() {
         requestQueue.cancelAll("all");
     }
 }
+
