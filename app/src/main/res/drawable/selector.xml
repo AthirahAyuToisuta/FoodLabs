@@ -3,7 +3,7 @@
 
      <item
          android:state_selected="true"
-         android:drawable="@color/ColorBar"/>
+         android:drawable="@color/Yellow"/>
 
     <item
         android:state_selected="false"

@@ -3,20 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginTop="10dp"
+    android:layout_marginTop="4dp"
     android:layout_marginBottom="10dp"
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
         android:layout_width="130dp"
-        android:layout_height="wrap_content"
+        android:layout_height="250dp"
         android:layout_gravity="center"
-        android:layout_margin="8dp">
+        android:layout_margin="4dp">
 
         <LinearLayout
             android:layout_width="130dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
             android:orientation="vertical"
             android:paddingBottom="8dp">
 
@@ -55,6 +54,7 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="8dp"
                 android:paddingRight="8dp"
+                android:lines="4"
                 android:text="Fried Chicken, American"
                 android:textColor="#B0B0B2"
                 android:textSize="11sp"

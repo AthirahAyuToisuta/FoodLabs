@@ -41,7 +41,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.HomeActivityVi
         holder.txtAddress.setText(items.get(position).getRecipe_sub_title());
         holder.txtDetail.setText(items.get(position).getRecipe_desc());
 
-        Picasso.with(context).load(items.get(position).getRecipe_image()).into(holder.ivFood);
+        Picasso.with(context).load(items.get(position).getRecipe_image()).centerCrop().fit().into(holder.ivFood);
 
     }
 

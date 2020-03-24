@@ -1,4 +1,4 @@
-package com.thiraa.foodlabs.detail.connection;
+package com.thiraa.foodlabs.dapur_location.connection;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -6,36 +6,35 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.Volley;
 import com.thiraa.foodlabs.MyCustomApplication;
-import com.thiraa.foodlabs.detail.models.ResponseDetails;
-import com.thiraa.foodlabs.explore.model.BannerItem;
+import com.thiraa.foodlabs.dapur_location.model.ResponseDapurLocation;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class ConnectionAPI {
     public static final String URL = "https://private-anon-fa0b8f7862-food28.apiary-mock.com/";
 
-    public static final String detailURL = URL + "food/detail";
+    public static final String dapurUrl = URL + "location";
 
     private static RequestQueue requestQueue = Volley.newRequestQueue(MyCustomApplication.applicationContext);
 
-    public static void loadDetail(Map<String, String> params, final ApiCallback<ResponseDetails> callback) {
+    public static void loadDapur(Map<String, String> params, final ApiCallback<ResponseDapurLocation> callback) {
         Map<String, String> headers = new HashMap<>();
 //        Map<String, String> params = new HashMap<>();
 
-        GsonRequest<ResponseDetails> gsonRequest = new GsonRequest<>(
+        GsonRequest<ResponseDapurLocation> gsonRequest = new GsonRequest<>(
                 Request.Method.GET,
-                detailURL,
-                ResponseDetails.class,
+                dapurUrl,
+                ResponseDapurLocation.class,
                 headers,
                 params,
-                new Response.Listener<ResponseDetails>() {
+                new Response.Listener<ResponseDapurLocation>() {
                     @Override
-                    public void onResponse(ResponseDetails response) {
+                    public void onResponse(ResponseDapurLocation response) {
                         callback.onSuccess(response);
                     }
                 },
+
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
@@ -52,3 +51,4 @@ public class ConnectionAPI {
         requestQueue.cancelAll("all");
     }
 }
+

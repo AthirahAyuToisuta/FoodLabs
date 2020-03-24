@@ -1,137 +1,101 @@
 package com.thiraa.foodlabs.home;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Context;
-import android.graphics.Movie;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
 import android.os.Bundle;
-import android.telecom.Call;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.util.Log;
+
 import android.view.View;
-import android.widget.EditText;
+
 import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import com.android.volley.Response;
-import com.thiraa.foodlabs.BuildConfig;
 import com.thiraa.foodlabs.R;
-import com.thiraa.foodlabs.home.connection.ApiCallback;
-import com.thiraa.foodlabs.home.connection.ConnectionAPI;
-import com.thiraa.foodlabs.home.model.ResponseHome;
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import com.thiraa.foodlabs.dapur_location.model.FragmentLocation;
+import com.thiraa.foodlabs.home.model.FragmentHome;
 
 public class HomeActivity extends AppCompatActivity {
 
-    RecyclerView rvMostPopular, rvMealDeals;
-    EditText etSearch;
-    TextView tvMostPopular, tvMealDeals, tvSeeAllmp, tvSeeAllmd;
-    String search = "";
-    Context context;
+    ImageView ivHome, ivLocation, ivLove, ivUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        context = getApplicationContext();
+
         setView();
         setEvent();
-        loadFood();
-        loadMeal();
+        setFragment(new FragmentHome());
     }
 
-    private void setView() {
-        rvMostPopular = findViewById(R.id.rvMostPopular);
-        rvMealDeals = findViewById(R.id.rvMealDeals);
-        etSearch = findViewById(R.id.etSearch);
-        tvMostPopular = findViewById(R.id.tvMostPopular);
-        tvMealDeals = findViewById(R.id.tvMealDeals);
-        tvSeeAllmp = findViewById(R.id.tvSeeAllmp);
-        tvSeeAllmd = findViewById(R.id.tvSeaAllmd);
+    private void setFragment(Fragment fragment) {
 
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, fragment);
+            fragmentTransaction.commit();
     }
 
     private void setEvent() {
-        etSearch.addTextChangedListener(new TextWatcher() {
+        ivHome.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            public void onClick(View view) {
+                setFragment(new FragmentHome());
 
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                search = s.toString();
+//                ivHome.setImageDrawable(getResources().getDrawable(R.drawable.ic_home_klik));
+//                ivLocation.setImageDrawable(getResources().getDrawable(R.drawable.ic_location));
+//                ivLove.setImageDrawable(getResources().getDrawable(R.drawable.ic_love));
+//                ivUser.setImageDrawable(getResources().getDrawable(R.drawable.ic_user));
             }
         });
 
-        tvSeeAllmp.setOnClickListener(new View.OnClickListener() {
+        ivLocation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                setFragment(new FragmentLocation());
+//                ivHome.setImageDrawable(getResources().getDrawable(R.drawable.ic_home));
+//                ivLocation.setImageDrawable(getResources().getDrawable(R.drawable.ic_location_klik));
+//                ivLove.setImageDrawable(getResources().getDrawable(R.drawable.ic_love));
+//                ivUser.setImageDrawable(getResources().getDrawable(R.drawable.ic_user));
+
+            }
+        });
+
+        ivLove.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+//                ivHome.setImageDrawable(getResources().getDrawable(R.drawable.ic_home));
+//                ivLocation.setImageDrawable(getResources().getDrawable(R.drawable.ic_location));
+//                ivLove.setImageDrawable(getResources().getDrawable(R.drawable.ic_love_klik));
+//                ivUser.setImageDrawable(getResources().getDrawable(R.drawable.ic_user));
+
             }
         });
 
-        tvSeeAllmd.setOnClickListener(new View.OnClickListener() {
+        ivUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+//                ivHome.setImageDrawable(getResources().getDrawable(R.drawable.ic_home));
+//                ivLocation.setImageDrawable(getResources().getDrawable(R.drawable.ic_location));
+//                ivLove.setImageDrawable(getResources().getDrawable(R.drawable.ic_love));
+//                ivUser.setImageDrawable(getResources().getDrawable(R.drawable.ic_user_klik));
             }
         });
     }
 
-    private void setRecyclerViewFood(List<ResponseHome.DataEntity> data) {
-        FoodAdapter adapterFood = new FoodAdapter(data);
-        rvMostPopular.setAdapter(adapterFood);
+    private void setView() {
+        ivHome = findViewById(R.id.ivHome);
+        ivLocation = findViewById(R.id.ivLocation);
+        ivLove = findViewById(R.id.ivLove);
+        ivUser = findViewById(R.id.ivUser);
     }
 
-       private void setRecyclerViewMeal(List<ResponseHome.DataEntity> data) {
-        Log.e("test", "" + data.size());
-        MealAdapter adapterMeal = new MealAdapter(data);
-        rvMealDeals.setAdapter(adapterMeal);
-    }
-
-    private void loadFood() {
-
-        Map<String, String> params = new HashMap<>();
-        ConnectionAPI.loadHome(params, new ApiCallback<ResponseHome>() {
-            @Override
-            public void onSuccess(ResponseHome response) {
-                setRecyclerViewFood(response.getData());
-            }
-
-            @Override
-            public void onError(int statusCode, String message) {
-
-            }
-        });
-    }
-
-    private void loadMeal() {
-
-        Map<String, String> params = new HashMap<>();
-        ConnectionAPI.loadHome(params, new ApiCallback<ResponseHome>() {
-            @Override
-            public void onSuccess(ResponseHome response) {
-                setRecyclerViewMeal(response.getData());
-            }
-
-            @Override
-            public void onError(int statusCode, String message) {
-
-            }
-        });
-    }
 
 }
+

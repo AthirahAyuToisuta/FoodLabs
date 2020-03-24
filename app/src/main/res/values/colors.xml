@@ -5,8 +5,8 @@
     <color name="colorAccent">#D81B60</color>HEAD
     <color name="black">#8a8a8a</color>
 
-    <color name="ColorBar">#EED883</color>
+    <color name="Yellow">#EED883</color>
     <color name="White">#FFFFFFFF</color>
     <color name="whitee">#FAF6F6</color>
-    <color name="black1">#0F0F0F</color>
+    <color name="Black">#0F0F0F</color>
 </resources>
