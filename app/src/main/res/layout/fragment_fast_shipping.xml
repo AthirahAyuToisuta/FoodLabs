@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:textSize="20dp"
             android:textStyle="bold"
-            tools:text="Fast shipping" />
+            android:text="Fast shipping" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -42,23 +42,23 @@
             android:layout_height="wrap_content"
             android:textSize="15dp"
             android:textStyle="bold"
-            tools:text="Set your location to start exploring" />
+           android:text="Set your location to start exploring" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="15dp"
             android:textStyle="bold"
-            tools:text="restaurant's around you" />
+            android:text="restaurant's around you" />
 
         <Button
-            android:id="@+id/btnLogin4"
+            android:id="@+id/btnLogin"
             android:layout_width="400dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:background="#EEEDED"
             android:gravity="center"
-            android:text="LOGIN"
+            android:text="getstart it"
             android:textColor="@color/black"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -76,7 +76,7 @@
             android:layout_width="8dp"
             android:layout_height="7dp"
             android:layout_marginLeft="166dp"
-            android:src="@drawable/ic_circle_white" />
+            android:src="@drawable/ic_circle" />
 
         <ImageView
             android:id="@+id/page2"
@@ -95,7 +95,7 @@
             android:layout_width="7dp"
             android:layout_height="8dp"
             android:layout_marginLeft="5dp"
-            android:src="@drawable/ic_circle"/>
+            android:src="@drawable/ic_circle_white"/>
 
     </LinearLayout>
 
