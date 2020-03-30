@@ -21,7 +21,6 @@ import java.util.Map;
 
 public class DetailActivity extends AppCompatActivity {
 
-
     public static ResponseDetails.DataEntity responseDetailData;
     TextView tvIngredients, tvDirections;
 
@@ -31,14 +30,11 @@ public class DetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail);
 
         setView();
-
         setEvent();
 
         FragmentIngredients fragment = new FragmentIngredients();
         fragment.responseDetailData = responseDetailData;
         setFragment(fragment);
-
-
     }
 
     private void setView() {
@@ -72,6 +68,4 @@ public class DetailActivity extends AppCompatActivity {
         fragmentTransaction.replace(R.id.fragment_container, fragment);
         fragmentTransaction.commit();
     }
-
-
 }

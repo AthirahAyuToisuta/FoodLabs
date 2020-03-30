@@ -14,9 +14,6 @@ import android.widget.TextView;
 import com.thiraa.foodlabs.R;
 import com.thiraa.foodlabs.detail.models.ResponseDetails;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class FragmentIngredients extends Fragment {
 
     public ResponseDetails.DataEntity responseDetailData;
