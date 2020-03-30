@@ -23,7 +23,7 @@ public class ConnectionAPI {
 
     public static void loadDetail(Map<String, String> params,
                                                     final ApiCallback<ResponseDetails> callback){
-    public static void loadDetail(Map<String, String> params, final ApiCallback<ResponseDetails> callback) {
+
         Map<String, String> headers = new HashMap<>();
 //        Map<String, String> params = new HashMap<>();
 
