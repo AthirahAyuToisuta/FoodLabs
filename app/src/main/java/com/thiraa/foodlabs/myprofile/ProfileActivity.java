@@ -6,9 +6,9 @@ import androidx.viewpager.widget.ViewPager;
 import android.os.Bundle;
 
 import com.thiraa.foodlabs.R;
+
 import com.thiraa.foodlabs.intro.models.ViewPagerAdapter;
 
-import com.thiraa.foodlabs.R;
 
 public class ProfileActivity extends AppCompatActivity {
     private ViewPager viewPager;

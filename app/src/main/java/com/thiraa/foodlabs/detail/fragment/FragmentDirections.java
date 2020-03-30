@@ -15,18 +15,15 @@ import android.widget.TextView;
 import com.thiraa.foodlabs.R;
 import com.thiraa.foodlabs.detail.models.ResponseDetails;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class FragmentDirections extends Fragment {
 
     public ResponseDetails.DataEntity responseDetailData;
-    TextView tvOne, tvTwo, tvThree, tvTitleOne, tvTitleTwo, tvTitleThree, tvKetOne, tvKetTwo, tvKetThree;
+    TextView tvOne, tvTwo, tvThree, tvTitleOne, tvTitleTwo,
+            tvTitleThree, tvKetOne, tvKetTwo, tvKetThree;
 
     public FragmentDirections() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

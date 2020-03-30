@@ -9,10 +9,15 @@
     <color name="White">#FFFFFFFF</color>
     <color name="whitee">#FAF6F6</color>
     <color name="black1">#0F0F0F</color>
+
     <color name="ccc">#F3EBEB</color>
     <color name="blue">#00BCD4</color>
     <color name="biru">#00BCD4</color>
     <color name="kuning">#F1B913</color>
     <color name="item">#696666</color>
+
+
+    <color name="coffee">#A59072</color>
+    <color name="gray">#A1A1A1</color>
     <color name="Black">#0F0F0F</color>
 </resources>

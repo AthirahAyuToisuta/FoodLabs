@@ -8,7 +8,6 @@
 
 
     <ImageView
-        android:marginBottom="2dp"
         android:layout_gravity="center"
         android:layout_marginTop="2dp"
         android:id="@+id/image_galeri"

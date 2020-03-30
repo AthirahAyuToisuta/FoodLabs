@@ -37,6 +37,7 @@
         <activity android:name=".intro.Main4Activity" />
         <activity android:name=".home.HomeActivity">
 
+        <activity android:name=".login_regis.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -44,6 +45,14 @@
             </intent-filter>
 
         </activity>
+        <activity android:name=".myprofile.ProfileActivity" />
+        <activity android:name=".login_regis.RegisterActivity">
+
+        </activity>
+        <activity android:name=".dapur_location.LocationActivity" />
+        <activity android:name=".detail.AuthActivity" />
+        <activity android:name=".explore.BannerSampleActivity" />
+        <activity android:name=".home.HomeActivity"></activity>
         <activity android:name=".detail.DetailActivity" />
         <activity android:name=".MainActivity">
 

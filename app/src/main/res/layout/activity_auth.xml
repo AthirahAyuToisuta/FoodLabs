@@ -6,7 +6,6 @@
     tools:context=".detail.AuthActivity">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -90,9 +89,9 @@
 
                 <RatingBar
                     style="@style/Widget.AppCompat.RatingBar.Small"
-                    android:layout_gravity="center"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
 
                 <TextView
                     android:id="@+id/tvReviews"
@@ -100,7 +99,6 @@
                     android:layout_height="wrap_content"
                     android:paddingLeft="5dp"
                     android:text="(288 Reviews)" />
-
             </LinearLayout>
 
             <TextView
@@ -167,7 +165,6 @@
                 android:orientation="vertical">
 
                 <TextView
-
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="10dp"
@@ -230,7 +227,9 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="20sp"
                 android:paddingLeft="10dp"
-                android:text="The classic pile-up of toasted English mulfins topped with seared Canadian bacon, poached eggs and creamy hollandaise sauce you usually reserve for weekend brunch plans."
+                android:text="The classic pile-up of toasted English mulfins topped with seared
+                Canadian bacon, poached eggs and creamy hollandaise sauce you usually reserve for
+                weekend brunch plans."
                 android:textColor="#000000"
                 android:textSize="14sp" />
         </LinearLayout>

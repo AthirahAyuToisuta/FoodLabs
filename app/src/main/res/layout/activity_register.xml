@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login_regis.LoginActivity">
+    tools:context=".login_regis.RegisterActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -45,25 +45,26 @@
                         android:textSize="18dp" />
 
                     <TextView
-                        android:id="@+id/tvSignUp"
+                        android:id="@+id/tvLogIn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="right"
                         android:paddingRight="8dp"
-                        android:text="Sign Up"
+                        android:text="Log In"
                         android:textColor="#FFFFFF"
                         android:textSize="18dp" />
                 </LinearLayout>
             </FrameLayout>
 
             <TextView
+                android:id="@+id/tvText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="150dp"
-                android:paddingLeft="20dp"
                 android:paddingTop="25dp"
-                android:text="Welcome back to Good Food"
+                android:paddingLeft="20dp"
+                android:text="Let's start making good meals"
                 android:textSize="30sp" />
         </LinearLayout>
 
@@ -83,8 +84,8 @@
                     android:layout_height="56dp"
                     android:hint="Your Email"
                     android:inputType="textEmailAddress"
-                    android:textStyle="bold"></com.google.android.material.textfield.TextInputEditText>
-
+                    android:textStyle="bold">
+                </com.google.android.material.textfield.TextInputEditText>
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -97,39 +98,9 @@
                     android:layout_height="56dp"
                     android:hint="Password"
                     android:inputType="textPassword"
-                    android:textStyle="bold"></com.google.android.material.textfield.TextInputEditText>
-
+                    android:textStyle="bold">
+                </com.google.android.material.textfield.TextInputEditText>
             </com.google.android.material.textfield.TextInputLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal">
-
-                <Switch
-                    android:id="@+id/switch1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:checked="false"
-                    android:padding="5dp"
-                    android:theme="@style/mySwitch"
-                    android:thumb="@drawable/ic_brightness"
-                    android:track="@drawable/track_selector"></Switch>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Remember" />
-
-                <TextView
-                    android:id="@+id/tvForgot"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="right"
-                    android:paddingRight="5dp"
-                    android:text="Forgot?" />
-            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -139,13 +110,65 @@
                 android:padding="10dp">
 
                 <TextView
-                    android:id="@+id/tvLogin"
+                    android:id="@+id/tvCreate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/shape_rounded_create_account"
                     android:gravity="center"
-                    android:text="Log In"
+                    android:text="Create Account"
                     android:textColor="#FFFFFF" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/shape_rounded_facebook"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/tvFacebook"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_facebook"
+                            android:drawablePadding="10dp"
+                            android:text="Sign Up with Facebook"
+                            android:textColor="#000000" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Terms of Use"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:text="and"
+                    android:textColor="#C3C3C3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Privacy Police"
+                    android:textColor="#000000" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
