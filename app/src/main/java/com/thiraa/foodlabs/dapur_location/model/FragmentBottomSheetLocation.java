@@ -7,6 +7,8 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,10 +28,14 @@ import java.util.Map;
 
 public class FragmentBottomSheetLocation extends BottomSheetDialogFragment {
 
+    public static ResponseDapurLocation.DataEntity responseDapurLocation;
+
+
     TextView tvKitchenName, tvKitchenOpen, tvKitchenAddress;
     Button btnKitchenRating;
     ImageView ivKitchen;
     Context context;
+    Fragment fragment;
 
     public FragmentBottomSheetLocation(){
 
@@ -50,7 +56,24 @@ public class FragmentBottomSheetLocation extends BottomSheetDialogFragment {
 
         setView(view);
         setEvent();
+
+        FragmentBottomSheetLocation bottomSheetLocation = new FragmentBottomSheetLocation();
+
+        setFragment(fragment);
     }
+
+    private void setFragment(Fragment fragment) {
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.fragment_container, fragment);
+        fragmentTransaction.commit();
+    }
+
+    private FragmentManager getSupportFragmentManager() {
+        return null;
+    }
+
 
     private void setEvent() {
 

@@ -35,6 +35,8 @@ import java.util.Map;
 
 public class ReviewDapurActivity extends AppCompatActivity implements OnMapReadyCallback {
 
+    public static FragmentBottomSheetLocation fragmentBottomSheetLocation;
+
     ImageView ivBack;
     TextView tvReviewDapur;
     EditText etSearch;

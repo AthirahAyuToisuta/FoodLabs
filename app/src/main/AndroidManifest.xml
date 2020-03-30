@@ -14,9 +14,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".dapur_location.LocationActivity"></activity>
-        <activity android:name=".detail.AuthActivity"></activity>
-        <activity android:name=".explore.BannerSampleActivity"></activity>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -25,36 +22,19 @@
         <activity android:name=".myprofile.ProfileActivity" />
         <activity android:name=".login_regis.LoginActivity" />
         <activity android:name=".dapur_location.LocationActivity" />
-        <activity android:name=".dapur_location.ReviewDapurActivity">
-
-
-        </activity>
-
+        <activity android:name=".dapur_location.ReviewDapurActivity"/>
         <activity android:name=".dapur_location.ListDapurActivity" />
         <activity android:name=".detail.AuthActivity" />
-        <activity android:name=".intro.models.ViewPagerIntro" />
         <activity android:name=".explore.BannerSampleActivity" />
-        <activity android:name=".intro.Main4Activity" />
         <activity android:name=".home.HomeActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity android:name=".detail.DetailActivity" />
-        <activity android:name=".MainActivity">
-
-            <!--
-             <intent-filter>
-                 <action android:name="android.intent.action.MAIN" />
-
-                 <category android:name="android.intent.category.LAUNCHER" />
-             </intent-filter>
-            -->
-        </activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
